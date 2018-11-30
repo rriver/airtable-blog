@@ -15,11 +15,17 @@ export default ({ children }) => (
     `}
     render={data => (
       <div className={styles.wrapper}>
+        <header>
         <Link to={`/`} className={styles.titleLink}>
           <h3 className={styles.blogTitle}>{data.site.siteMetadata.title}</h3>
         </Link>
+        </header>
+        <main>
         {children}
-        <p className={styles.copyright}>Copyright &copy; 2018- Ryo Watanabe. All rights reserved.</p>
+        </main>
+        <footer>
+          <p className={styles.copyright}>Copyright © 2018 Ryo Watanabe. All rights reserved.</p>
+        </footer>
       </div>
     )}
   />

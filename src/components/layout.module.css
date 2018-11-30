@@ -1,6 +1,9 @@
 .wrapper {
   max-width: 720px;
   margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .titleLink {
@@ -10,12 +13,13 @@
 
 .blogTitle {
   text-align: center;
-  margin: 2em 1em 3rem;
+  margin: 0;
+  padding: 1rem;
 }
 
 .copyright {
   font-size: 1rem;
-  font-family: sans-serif, Arial;
+  font-family: arial,'メイリオ',Meiryo,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック',sans-serif;
   text-align: center;
-  margin: 6rem 0;
+  margin: 2rem 0 1rem;
 }
