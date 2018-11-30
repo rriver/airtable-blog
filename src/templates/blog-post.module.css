@@ -76,13 +76,16 @@
 }
 
 .postBody pre {
-  background: #555;
+  background: #444;
   padding: 0.6rem 1rem;
   margin: 2.4rem 0;
-  font-size: 1.3rem;
+  border-radius: 6px;
+}
+.postBody code {
+  font-family: sans-serif, arial;
+  font-size: 1rem;
   line-height: 1.6;
   color: #fff;
-  border-radius: 6px;
 }
 
 .postBody p + h2 {

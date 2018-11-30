@@ -2,10 +2,15 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import containerStyles from "../components/layout.module.css"
 import styles from "./index.module.css"
+import Helmet from "react-helmet"
 
 export default ({ data }) => {
    return (
       <div className={containerStyles.wrapper}>
+         <Helmet>
+            <title>R Note</title>
+            <link rel="shortcut icon" href="https://parashuto.com/rriver/wp/wp-content/themes/rriver2/favicon.ico"></link>
+         </Helmet>
          <main>
             <h1 className={styles.blogtitle}>{data.site.siteMetadata.title}</h1>
             <p className={styles.totalposts}>{data.allAirtable.totalCount} posts</p>
