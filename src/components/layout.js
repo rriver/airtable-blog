@@ -19,6 +19,7 @@ export default ({ children }) => (
           <h3 className={styles.blogTitle}>{data.site.siteMetadata.title}</h3>
         </Link>
         {children}
+        <p className={styles.copyright}>Copyright &copy; 2018- Ryo Watanabe. All rights reserved.</p>
       </div>
     )}
   />

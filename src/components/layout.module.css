@@ -12,3 +12,10 @@
   text-align: center;
   margin: 2em 1em 3rem;
 }
+
+.copyright {
+  font-size: 1rem;
+  font-family: sans-serif, Arial;
+  text-align: center;
+  margin: 6rem 0;
+}

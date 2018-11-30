@@ -18,6 +18,7 @@ export default ({ data }) => {
             ))}
          </ul>
          <p className={styles.totalposts}>{data.allAirtable.totalCount} posts</p>
+         <p className={containerStyles.copyright}>Copyright &copy; 2018- Ryo Watanabe. All rights reserved.</p>
       </div>
    )
 }
