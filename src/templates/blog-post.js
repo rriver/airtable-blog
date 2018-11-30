@@ -8,8 +8,8 @@ export default ({ data }) => {
   return (
     <Layout>
       <h1 className={styles.postTitle}>{post.data.title}</h1>
-      <p className={styles.postBody}>{post.data.body}</p>
       <p className={styles.postDate}>Posted on {post.data.date}</p>
+      <p className={styles.postBody}>{post.data.body}</p>
     </Layout>
   )
 }

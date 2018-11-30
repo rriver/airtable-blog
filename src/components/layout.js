@@ -24,7 +24,7 @@ export default ({ children }) => (
         {children}
         </main>
         <footer>
-          <p className={styles.copyright}>Copyright © 2018 Ryo Watanabe. All rights reserved.</p>
+          <p className={styles.copyright}>Copyright <span>©</span> 2018 Ryo Watanabe. All rights reserved.</p>
         </footer>
       </div>
     )}
