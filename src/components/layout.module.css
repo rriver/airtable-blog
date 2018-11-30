@@ -1,0 +1,14 @@
+.wrapper {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.titleLink {
+  text-decoration: none;
+  color: rgb(0, 97, 153);
+}
+
+.blogTitle {
+  text-align: center;
+  margin: 2em 1em 3rem;
+}

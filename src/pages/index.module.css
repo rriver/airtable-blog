@@ -1,0 +1,29 @@
+.blogtitle {
+  text-align: center;
+  margin: 3rem 1rem;
+  font-size: 3rem;
+}
+
+.postlist {
+  list-style: none;
+  margin: 0 0 4rem;
+}
+
+.postlist li {
+  margin-bottom: 1.6rem;
+  font-size: 1.6rem;
+}
+
+.postlist a {
+  text-decoration: none;
+  color: rgb(0, 97, 153);
+}
+
+.postlist a:hover {
+  text-decoration: underline;
+}
+
+.totalposts {
+  text-align: center;
+  font-size: 1.2rem;
+}

@@ -1,0 +1,20 @@
+{
+  "name": "airtable-blog",
+  "version": "1.0.0",
+  "description": "Gatsby + Airtable blog",
+  "main": "index.js",
+  "dependencies": {
+    "gatsby": "^2.0.57",
+    "gatsby-source-airtable": "^2.0.2",
+    "gatsby-source-filesystem": "^2.0.9",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "remark-html": "^9.0.0",
+    "unified": "^7.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

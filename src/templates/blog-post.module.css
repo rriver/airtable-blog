@@ -1,0 +1,21 @@
+.postWrapper {
+  background: #ddd;
+}
+
+.postTitle {
+  font-size: 3rem;
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.postBody {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.postDate {
+  margin: 3rem 0;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: center;
+}
