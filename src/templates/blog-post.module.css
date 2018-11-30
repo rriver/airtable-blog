@@ -22,10 +22,43 @@
   }
 }
 
+.postBody h2 {
+  font-size: 1.7rem;
+  line-height: 1.4;
+  color: #555;
+}
+@media (min-width: 480px){
+  .postBody h2 {
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 720px){
+  .postBody h2 {
+    font-size: 2.2rem;
+  }
+}
+
+.postBody h3 {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  color: #666;
+}
+@media (min-width: 480px){
+  .postBody h3 {
+    font-size: 1.7rem;
+  }
+}
+@media (min-width: 720px){
+  .postBody h3 {
+    font-size: 2.1rem;
+  }
+}
+
 .postBody p,
 .postBody li {
   font-size: 1rem;
   line-height: 1.8;
+  color: #333;
 }
 @media (min-width: 480px){
   .postBody p,
@@ -40,6 +73,20 @@
 }
 .postBody a:hover {
   text-decoration: underline;
+}
+
+.postBody pre {
+  background: #555;
+  padding: 0.6rem 1rem;
+  margin: 2.4rem 0;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: #fff;
+  border-radius: 6px;
+}
+
+.postBody p + h2 {
+  margin-top: 4rem;
 }
 
 .postDate {
