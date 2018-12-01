@@ -118,6 +118,7 @@
 
 .postBody p + h2,
 .postBody ul + h2,
+.postBody ol + h2,
 .postBody pre + h2 {
   margin-top: 4rem;
 }
