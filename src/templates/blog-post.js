@@ -19,7 +19,6 @@ class postTemplate extends React.Component {
             { property: 'og:title', content: post.airtable.data.title },
             { property: 'og:url', content: `${post.site.siteMetadata.url}/${post.airtable.data.slug}/` },
             { property: 'og:type', content: 'article' },
-            { property: 'og:description', content: post.airtable.data.title },
           ]}
         >
           <link rel="shortcut icon" href="https://parashuto.com/rriver/wp/wp-content/themes/rriver2/favicon.ico"></link>
