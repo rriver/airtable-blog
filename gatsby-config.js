@@ -13,6 +13,12 @@ module.exports = {
     `gatsby-plugin-netlify-cache`,
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-130202268-1`,
+      },
+    },
+    {
       resolve: `gatsby-source-airtable`,
       options: {
          apiKey: `${process.env.GATSBY_AIRTABLE_APIKEY}`,
