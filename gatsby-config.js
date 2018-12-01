@@ -5,8 +5,10 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `R Note`,
+    url: `https://rnote.work`,
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-airtable`,
       options: {

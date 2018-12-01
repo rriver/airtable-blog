@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "gatsby": "^2.0.57",
+    "gatsby-plugin-react-helmet": "^3.0.3",
     "gatsby-source-airtable": "^2.0.2",
     "gatsby-source-filesystem": "^2.0.9",
     "react": "^16.6.3",
