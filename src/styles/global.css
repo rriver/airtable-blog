@@ -16,6 +16,21 @@ main {
   flex: 1 0 auto;
   padding: 0 0.8rem;
 }
+@media (min-width: 640px){
+  main {
+    padding: 0 1.6rem;
+  }
+}
+@media (min-width: 768px){
+  main {
+    padding: 0 2rem;
+  }
+}
+@media (min-width: 780px){
+  main {
+    padding: 0;
+  }
+}
 
 img {
   width: 100%;
