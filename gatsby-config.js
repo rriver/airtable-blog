@@ -6,6 +6,7 @@ module.exports = {
   siteMetadata: {
     title: `R Note`,
     url: `https://rnote.work`,
+    description: `@rriverのノートです。書きなぐりの雑記なのであしからず。まともな記事はparashuto.com/rriverで`,
   },
   plugins: [
     `gatsby-plugin-netlify`,

@@ -18,6 +18,7 @@ class postTemplate extends React.Component {
             { name: 'author', content: `ryo watanabe` },
             { property: 'og:title', content: post.airtable.data.title },
             { property: 'og:url', content: `${post.site.siteMetadata.url}/${post.airtable.data.slug}/` },
+            { property: 'og:description', content: post.site.siteMetadata.description },
             { property: 'og:type', content: 'article' },
           ]}
         >
@@ -55,6 +56,7 @@ export const query = graphql`
       site {
         siteMetadata {
           url
+          description
         }
       }
     }

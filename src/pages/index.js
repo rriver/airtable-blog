@@ -14,10 +14,10 @@ class indexTemplate extends React.Component {
                <title>{post.site.siteMetadata.title}</title>
                <link rel="shortcut icon" href="https://parashuto.com/rriver/wp/wp-content/themes/rriver2/favicon.ico"></link>
                <meta name="title" content={post.site.siteMetadata.title} />
-               <meta name="description" content="@Rriverのノート" />
+               <meta name="description" content={post.site.siteMetadata.url} />
                <meta property="og:title" content={post.site.siteMetadata.title} />
                <meta property="og:type" content="website" />
-               <meta property="og:description" content="@Rriverのノート" />
+               <meta property="og:description" content={post.site.siteMetadata.description} />
                <meta property="og:url" content={post.site.siteMetadata.url} />
             </Helmet>
             <main>
@@ -67,6 +67,7 @@ export const query = graphql`
          siteMetadata {
             title
             url
+            description
          }
       }
    }
