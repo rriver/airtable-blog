@@ -76,13 +76,13 @@
 }
 
 .postBody pre {
-  background: #444;
-  padding: 1.6rem 0.8rem;
+  background: #333;
   margin: 2.4rem -0.8rem;
   font-size: 1rem;
   line-height: 1.8;
   color: #fff;
-  overflow-x: auto;
+  width: auto;
+  overflow: hidden;
 }
 @media (min-width: 740px){
   .postBody pre {
@@ -94,11 +94,23 @@
 }
 
 .postBody code {
-  font-family: sans-serif, arial;
+  font-family: arial, sans-serif;
+  display: inline-block;
+  width: calc(100% - 2.4rem);
+  overflow-x: auto;
+  padding: 1rem 0.8rem;
+}
+@media (min-width: 740px){
+  .postBody code {
+    width: 100%;
+    padding: 0;
+  }
 }
 
 
-.postBody p + h2 {
+.postBody p + h2,
+.postBody ul + h2,
+.postBody pre + h2 {
   margin-top: 4rem;
 }
 

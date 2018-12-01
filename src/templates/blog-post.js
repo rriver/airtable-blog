@@ -20,7 +20,7 @@ export default ({ data }) => {
         <meta property="og:url" content={`https://rnote.work/${post.data.slug}`} />
       </Helmet>
       <h1 className={styles.postTitle}>{post.data.title}</h1>
-      <p className={styles.postDate}>Posted on {post.data.date}</p>
+      <p className={styles.postDate}>Noted on {post.data.date}</p>
       <div
         className={styles.postBody}
         dangerouslySetInnerHTML={{

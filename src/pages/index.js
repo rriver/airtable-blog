@@ -13,7 +13,7 @@ export default ({ data }) => {
          </Helmet>
          <main>
             <h1 className={styles.blogtitle}>{data.site.siteMetadata.title}</h1>
-            <p className={styles.totalposts}>{data.allAirtable.totalCount} posts</p>
+            <p className={styles.totalposts}>{data.allAirtable.totalCount} notes</p>
             <ul className={styles.postlist}>
                {data.allAirtable.edges.map(({ node }, index) => (
                   <li key={index}>
