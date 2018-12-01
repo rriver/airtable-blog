@@ -11,14 +11,17 @@ export default ({ data }) => {
   const { airtable: post } = data
   return (
     <Layout>
-      <Helmet>
-        <title>{post.data.title} | R Note</title>
+      <Helmet
+        title={`${post.data.title} | R Note`}
+        meta={[
+          { name: 'author', content: `ryo watanabe` },
+          { property: 'og:title', content: post.data.title },
+          { property: 'og:url', content: `https://rnote.work/${post.data.slug}`},
+          { property: 'og:type', content: 'article' },
+          { property: 'og:description', content: post.data.title },
+        ]}
+      >
         <link rel="shortcut icon" href="https://parashuto.com/rriver/wp/wp-content/themes/rriver2/favicon.ico"></link>
-        <meta name="author" content="ryo watanabe" />
-        <meta property="og:url" content={`https://rnote.work/${post.data.slug}`} />
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content={post.data.title} />
-        <meta property="og:description" content={post.data.title} />
       </Helmet>
       <h1 className={styles.postTitle}>{post.data.title}</h1>
       <p className={styles.postDate}>Noted on {post.data.date}</p>
