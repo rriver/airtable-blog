@@ -17,7 +17,7 @@ class postTemplate extends React.Component {
           meta={[
             { name: 'author', content: `ryo watanabe` },
             { property: 'og:title', content: post.airtable.data.title },
-            { property: 'og:url', content: `${post.site.siteMetadata.url}/${post.airtable.data.slug}`},
+            { property: 'og:url', content: `${post.site.siteMetadata.url}/${post.airtable.data.slug}/` },
             { property: 'og:type', content: 'article' },
             { property: 'og:description', content: post.airtable.data.title },
           ]}
