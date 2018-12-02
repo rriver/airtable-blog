@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby"
 import containerStyles from "../components/layout.module.css"
 import styles from "./index.module.css"
 import Helmet from "react-helmet"
+import Footer from "../components/footer"
 
 class indexTemplate extends React.Component {
    render() {
@@ -35,9 +36,7 @@ class indexTemplate extends React.Component {
                   ))}
                </ul>
             </main>
-            <footer>
-               <p className={containerStyles.copyright}>Copyright &copy; 2018 Ryo Watanabe. All rights reserved.</p>
-            </footer>
+            <Footer />
          </div>
       )
    }

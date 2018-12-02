@@ -1,6 +1,7 @@
 import React from "react"
 import { StaticQuery, Link, graphql } from "gatsby"
 import styles from "./layout.module.css"
+import Footer from "./footer"
 
 export default ({ children }) => (
   <StaticQuery
@@ -23,9 +24,7 @@ export default ({ children }) => (
         <main>
         {children}
         </main>
-        <footer>
-          <p className={styles.copyright}>Copyright <span>©</span> 2018 Ryo Watanabe. All rights reserved.</p>
-        </footer>
+        <Footer />
       </div>
     )}
   />

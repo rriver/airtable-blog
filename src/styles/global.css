@@ -16,12 +16,7 @@ main {
   flex: 1 0 auto;
   padding: 0 0.8rem;
 }
-@media (min-width: 640px){
-  main {
-    padding: 0 1.6rem;
-  }
-}
-@media (min-width: 768px){
+@media (min-width: 740px){
   main {
     padding: 0 2rem;
   }

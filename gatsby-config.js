@@ -4,9 +4,9 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `R Note`,
+    title: `R note`,
     url: `https://rnote.work`,
-    description: `@rriverのノートです。書きなぐりの雑記なのであしからず。まともな記事はparashuto.com/rriverで`,
+    description: `@rriverの雑記ノートです。思ったことを書きなぐってます。まともな記事はparashuto.com/rriverで`,
   },
   plugins: [
     `gatsby-plugin-netlify`,
