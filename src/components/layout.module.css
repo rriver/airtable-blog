@@ -16,3 +16,28 @@
   margin: 0;
   padding: 1rem;
 }
+
+.bottomLink {
+  display: block;
+  width: 6rem;
+  margin: 6rem auto 2rem;
+  padding: 0.6rem 1rem;
+  text-align: center;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 2rem;
+  background: #eee;
+  color: #555;
+  transition: background-color 0.6s, color 0.6s;
+}
+@media (min-width: 480px){
+  .bottomLink {
+    padding: 0.8rem 1.8rem;
+    font-size: 1.2rem;
+  }
+}
+
+.bottomLink:hover {
+  background: rgb(0, 97, 153);
+  color: #fff;
+}

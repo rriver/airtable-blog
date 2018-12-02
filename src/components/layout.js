@@ -17,12 +17,15 @@ export default ({ children }) => (
     render={data => (
       <div className={styles.wrapper}>
         <header>
-        <Link to={`/`} className={styles.titleLink}>
-          <h3 className={styles.blogTitle}>{data.site.siteMetadata.title}</h3>
-        </Link>
+          <Link to={`/`} className={styles.titleLink}>
+            <h3 className={styles.blogTitle}>{data.site.siteMetadata.title}</h3>
+          </Link>
         </header>
         <main>
-        {children}
+          {children}
+          <Link to={`/`} className={styles.bottomLink}>
+            一覧に戻る
+          </Link>
         </main>
         <Footer />
       </div>
