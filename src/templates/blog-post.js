@@ -20,7 +20,7 @@ class postTemplate extends React.Component {
             { property: 'og:url', content: `${post.site.siteMetadata.url}/${post.airtable.data.slug}/` },
             { property: 'og:description', content: post.site.siteMetadata.description },
             { property: 'og:type', content: 'article' },
-            { property: 'og:image', content: withPrefix('/img/rnote-logo-ogimage.png') },
+            { property: 'og:image', content: `${post.site.siteMetadata.url}${withPrefix('/img/rnote-logo-ogimage.png')}` },
           ]}
         >
           <link rel="shortcut icon" href="https://parashuto.com/rriver/wp/wp-content/themes/rriver2/favicon.ico"></link>
