@@ -124,5 +124,6 @@ typings/
 
 ### Gatsby ###
 public/*
+design/*
 
 # End of https://www.gitignore.io/api/node,macos,visualstudiocode

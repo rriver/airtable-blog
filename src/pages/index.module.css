@@ -1,8 +1,12 @@
 .blogtitle {
-  text-align: center;
-  margin: 3rem 1rem 2rem;
-  font-size: 3rem;
-  color: #555;
+  width: 210px;
+  height: 80px;
+  overflow: hidden;
+  margin: 3rem auto 2rem;
+  text-indent: -9999px;
+  background: url(../assets/rnote-logo.png) no-repeat 0 0;
+  background: url(../assets/rnote-logo.svg) no-repeat 0 0, linear-gradient(transparent, transparent);
+  background-size: 210px 160px;
 }
 
 .postlist {

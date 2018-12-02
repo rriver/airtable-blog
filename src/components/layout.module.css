@@ -7,14 +7,26 @@
 }
 
 .titleLink {
-  text-decoration: none;
-  color: rgb(0, 97, 153);
+  display: block;
+  margin: 1rem auto 0.8rem;
+  width: 80px;
+  height: 30px;
 }
 
 .blogTitle {
-  text-align: center;
-  margin: 0;
-  padding: 1rem;
+  width: 80px;
+  height: 30px;
+  background: #ddd;
+  overflow: hidden;
+  text-indent: -9999px;
+  background: url(../assets/rnote-logo.png) no-repeat 0 0;
+  background: url(../assets/rnote-logo.svg) no-repeat 0 0, linear-gradient(transparent, transparent);
+  background-size: 80px 61px;
+}
+.blogTitle:hover {
+  background: url(../assets/rnote-logo.png) no-repeat 0 -30.5px;
+  background: url(../assets/rnote-logo.svg) no-repeat 0 -30.5px, linear-gradient(transparent, transparent);
+  background-size: 80px 61px;
 }
 
 .bottomLink {
