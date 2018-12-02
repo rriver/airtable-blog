@@ -6,6 +6,7 @@ import unified from "unified"
 import markdown from "remark-parse"
 import html from "remark-html"
 import Helmet from "react-helmet"
+import OGImage from "../assets/rnote-logo-ogimage.png"
 
 class postTemplate extends React.Component {
   render(){
@@ -20,6 +21,7 @@ class postTemplate extends React.Component {
             { property: 'og:url', content: `${post.site.siteMetadata.url}/${post.airtable.data.slug}/` },
             { property: 'og:description', content: post.site.siteMetadata.description },
             { property: 'og:type', content: 'article' },
+            { property: 'og:image', content: OGImage },
           ]}
         >
           <link rel="shortcut icon" href="https://parashuto.com/rriver/wp/wp-content/themes/rriver2/favicon.ico"></link>
