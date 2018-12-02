@@ -1,12 +1,28 @@
 .blogtitle {
-  width: 210px;
-  height: 80px;
+  width: 168px;
+  height: 64px;
   overflow: hidden;
-  margin: 3rem auto 2rem;
+  margin: 3.8rem auto 1.8rem;
   text-indent: -9999px;
   background: url(../assets/rnote-logo.png) no-repeat 0 0;
   background: url(../assets/rnote-logo.svg) no-repeat 0 0, linear-gradient(transparent, transparent);
-  background-size: 210px 160px;
+  background-size: 168px 128px;
+}
+@media (min-width: 380px){
+  .blogtitle {
+    width: 193px;
+    height: 73.5px;
+    margin: 4rem auto 2.2rem;
+    background-size: 193px 147px;
+  }
+}
+@media (min-width: 480px){
+  .blogtitle {
+    width: 210px;
+    height: 80px;
+    margin: 4.4rem auto 2.6rem;
+    background-size: 210px 160px;
+  }
 }
 
 .postlist {
@@ -40,6 +56,16 @@
 
 .totalposts {
   text-align: center;
-  font-size: 1.1rem;
-  color: #666;
+  font-size: 0.9rem;
+  color: #777;
+}
+@media (min-width: 380px){
+  .totalposts {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 480px){
+  .totalposts {
+    font-size: 1.2rem;
+  }
 }
