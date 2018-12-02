@@ -7,6 +7,7 @@ module.exports = {
     title: `R note`,
     url: `https://rnote.work`,
     description: `@rriverの雑記ノートです。思ったことを書きなぐってます。まともな記事はparashuto.com/rriverで`,
+    twitter: `@rriver`,
   },
   plugins: [
     `gatsby-plugin-netlify`,
