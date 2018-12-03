@@ -42,18 +42,18 @@
 }
 
 .postBody h3 {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 1.4;
-  color: #666;
+  color: #777;
 }
 @media (min-width: 480px){
   .postBody h3 {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
 }
 @media (min-width: 720px){
   .postBody h3 {
-    font-size: 2.1rem;
+    font-size: 1.9rem;
   }
 }
 
@@ -122,7 +122,7 @@
   }
 }
 
-.postBody code {
+.postBody pre code {
   font-family: arial, sans-serif;
   display: inline-block;
   width: calc(100% - 2.4rem);
@@ -130,16 +130,18 @@
   padding: 1rem 0.8rem;
 }
 @media (min-width: 740px){
-  .postBody code {
+  .postBody pre code {
     width: 100%;
     padding: 0;
   }
 }
 
 .postBody p code {
+  font-family: arial, sans-serif;
   display: inline;
   background: #eee;
-  padding: 0.2rem 0.4rem;
+  padding: 0.2rem 0.5rem;
+  margin: 0 0.1rem;
   border-radius: 4px;
 }
 
@@ -147,7 +149,11 @@
 .postBody p + h2,
 .postBody ul + h2,
 .postBody ol + h2,
-.postBody pre + h2 {
+.postBody pre + h2,
+.postBody p + h3,
+.postBody ul + h3,
+.postBody ol + h3,
+.postBody pre + h3 {
   margin-top: 4rem;
 }
 
