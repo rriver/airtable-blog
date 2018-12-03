@@ -5,20 +5,21 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `R note`,
-    url: `https://rnote.work`,
+    siteUrl: `https://rnote.work`,
     description: `@rriverの雑記ノートです。思ったことを書きなぐってます。まともな記事はparashuto.com/rriverで`,
     twitter: `@rriver`,
   },
   plugins: [
-    `gatsby-plugin-netlify`,
-    `gatsby-plugin-netlify-cache`,
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: `UA-130202268-1`,
       },
     },
+    `gatsby-plugin-netlify`,
+    `gatsby-plugin-netlify-cache`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-airtable`,
       options: {

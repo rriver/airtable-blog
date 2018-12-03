@@ -17,16 +17,16 @@ class postTemplate extends React.Component {
           meta={[
             { name: 'author', content: `ryo watanabe` },
             { property: 'og:title', content: post.airtable.data.title },
-            { property: 'og:url', content: `${post.site.siteMetadata.url}/${post.airtable.data.slug}/` },
+            { property: 'og:url', content: `${post.site.siteMetadata.siteUrl}/${post.airtable.data.slug}/` },
             { property: 'og:description', content: post.site.siteMetadata.description },
             { property: 'og:type', content: 'article' },
-            { property: 'og:image', content: `${post.site.siteMetadata.url}${withPrefix('/img/rnote-logo-ogimage.png')}` },
+            { property: 'og:image', content: `${post.site.siteMetadata.siteUrl}${withPrefix('/img/rnote-logo-ogimage.png')}` },
             { property: 'twitter:card', content: 'summary' },
             { property: 'twitter:site', content: post.site.siteMetadata.twitter },
             { property: 'twitter:creator', content: post.site.siteMetadata.twitter },
             { property: 'twitter:title', content: post.airtable.data.title },
             { property: 'twitter:description', content: post.site.siteMetadata.description },
-            { property: 'twitter:image', content: `${post.site.siteMetadata.url}${withPrefix('/img/rnote-logo-ogimage.png')}` },
+            { property: 'twitter:image', content: `${post.site.siteMetadata.siteUrl}${withPrefix('/img/rnote-logo-ogimage.png')}` },
           ]}
         >
           <link rel="shortcut icon" href="https://parashuto.com/rriver/wp/wp-content/themes/rriver2/favicon.ico"></link>
@@ -62,7 +62,7 @@ export const query = graphql`
       }
       site {
         siteMetadata {
-          url
+          siteUrl
           description
           twitter
         }
