@@ -150,16 +150,32 @@
 .postBody ul + h2,
 .postBody ol + h2,
 .postBody pre + h2,
+.postBody img + h2,
 .postBody p + h3,
 .postBody ul + h3,
 .postBody ol + h3,
-.postBody pre + h3 {
+.postBody pre + h3,
+.postBody img + h3 {
   margin-top: 4rem;
 }
 
 .postBody p + ul {
   margin-top: -1rem;
 }
+
+/* image width iPhone alt */
+.postBody img[alt*="iPhone"] {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+}
+@media (min-width: 375px){
+  .postBody img[alt*="iPhone"] {
+    width: calc(375px - 0.8rem);
+  }
+}
+
 
 .postDate {
   margin: 1rem 0 4rem;
