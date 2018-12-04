@@ -2,9 +2,6 @@ import React from "react"
 import { graphql, withPrefix } from "gatsby"
 import Layout from "../components/layout"
 import styles from "./blog-post.module.css"
-import unified from "unified"
-import markdown from "remark-parse"
-import html from "remark-html"
 import Helmet from "react-helmet"
 
 class postTemplate extends React.Component {
@@ -18,14 +15,14 @@ class postTemplate extends React.Component {
             { name: 'author', content: `ryo watanabe` },
             { property: 'og:title', content: post.airtable.data.title },
             { property: 'og:url', content: `${post.site.siteMetadata.siteUrl}/${post.airtable.data.slug}/` },
-            { property: 'og:description', content: post.site.siteMetadata.description },
+            { property: 'og:description', content: post.airtable.data.body.childMarkdownRemark.excerpt },
             { property: 'og:type', content: 'article' },
             { property: 'og:image', content: `${post.site.siteMetadata.siteUrl}${withPrefix('/img/rnote-logo-ogimage.png')}` },
             { property: 'twitter:card', content: 'summary' },
             { property: 'twitter:site', content: post.site.siteMetadata.twitter },
             { property: 'twitter:creator', content: post.site.siteMetadata.twitter },
             { property: 'twitter:title', content: post.airtable.data.title },
-            { property: 'twitter:description', content: post.site.siteMetadata.description },
+            { property: 'twitter:description', content: post.airtable.data.body.childMarkdownRemark.excerpt },
             { property: 'twitter:image', content: `${post.site.siteMetadata.siteUrl}${withPrefix('/img/rnote-logo-ogimage.png')}` },
           ]}
         >
@@ -37,10 +34,7 @@ class postTemplate extends React.Component {
         <div
           className={styles.postBody}
           dangerouslySetInnerHTML={{
-            __html: unified()
-              .use(markdown)
-              .use(html)
-              .processSync(post.airtable.data.body)
+            __html: post.airtable.data.body.childMarkdownRemark.html
           }}
         />
       </Layout>
@@ -55,7 +49,12 @@ export const query = graphql`
       airtable(data: {slug: { eq: $slug }}) {
         data {
           title
-          body
+          body {
+            childMarkdownRemark {
+              html
+              excerpt
+            }
+          }
           date(formatString: "YYYY/MM/DD HH:mm")
           slug
         }

@@ -29,11 +29,13 @@ module.exports = {
                baseId: 'appy2K4C7JMm8lJKu',
                tableName: 'entry',
                tableView: 'Published',
-               queryName: ''
+               queryName: '',
+               mapping: { 'body': 'text/markdown' },
             },
          ]
       },
     },
+    `gatsby-transformer-remark`,
   ],
   pathPrefix: `/img`
 }
