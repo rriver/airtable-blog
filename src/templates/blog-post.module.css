@@ -170,9 +170,9 @@
   margin: 0 auto;
   border: 1px solid #ddd;
 }
-@media (min-width: 375px){
+@media (min-width: 400px){
   .postBody img[alt*="iPhone"] {
-    width: calc(375px - 0.8rem);
+    width: 375px;
   }
 }
 
