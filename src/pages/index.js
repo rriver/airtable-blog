@@ -11,7 +11,9 @@ class indexTemplate extends React.Component {
 
       return (
          <div className={containerStyles.wrapper}>
-            <Helmet>
+            <Helmet
+               htmlAttributes={{ lang: 'ja' }}
+            >
                <title>{post.site.siteMetadata.title}</title>
                <link rel="shortcut icon" href="https://parashuto.com/rriver/wp/wp-content/themes/rriver2/favicon.ico"></link>
                <meta name="title" content={post.site.siteMetadata.title} />

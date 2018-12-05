@@ -12,6 +12,7 @@ class postTemplate extends React.Component {
     return (
       <Layout>
         <Helmet
+          htmlAttributes={{ lang: 'ja' }}
           meta={[
             { name: 'author', content: `ryo watanabe` },
             { property: 'og:title', content: post.airtable.data.title },
