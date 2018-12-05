@@ -3,6 +3,7 @@ import { graphql, withPrefix } from "gatsby"
 import Layout from "../components/layout"
 import styles from "./blog-post.module.css"
 import Helmet from "react-helmet"
+import "../styles/prism-tomorrow.css"
 
 class postTemplate extends React.Component {
   render(){
@@ -45,26 +46,26 @@ class postTemplate extends React.Component {
 export default postTemplate
 
 export const query = graphql`
-    query($slug: String!){
-      airtable(data: {slug: { eq: $slug }}) {
-        data {
-          title
-          body {
-            childMarkdownRemark {
-              html
-              excerpt
-            }
+  query($slug: String!){
+    airtable(data: {slug: { eq: $slug }}) {
+      data {
+        title
+        body {
+          childMarkdownRemark {
+            html
+            excerpt
           }
-          date(formatString: "YYYY/MM/DD HH:mm")
-          slug
         }
-      }
-      site {
-        siteMetadata {
-          siteUrl
-          description
-          twitter
-        }
+        date(formatString: "YYYY/MM/DD HH:mm")
+        slug
       }
     }
+    site {
+      siteMetadata {
+        siteUrl
+        description
+        twitter
+      }
+    }
+  }
 `
