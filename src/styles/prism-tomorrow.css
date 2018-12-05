@@ -25,7 +25,6 @@ pre[class*="language-"] {
 	color: #ccc;
 	background: none;
 	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-	font-size: 1rem;
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
@@ -42,12 +41,6 @@ pre[class*="language-"] {
 	-ms-hyphens: none;
 	hyphens: none;
 }
-@media (min-width: 480px){
-	/* code[class*="language-"], */
-	pre[class*="language-"] {
-		font-size: 1.2rem;
-	}
-}
 
 /* Code blocks */
 pre[class*="language-"] {
@@ -60,6 +53,12 @@ pre[class*="language-"] {
 
 code[class*="language-"] {
 	display: block;
+	font-size: 1rem;
+}
+@media (min-width: 480px){
+	code[class*="language-"] {
+		font-size: 1.2rem;
+	}
 }
 
 /* line highlight */
