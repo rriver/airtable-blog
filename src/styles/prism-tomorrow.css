@@ -10,7 +10,6 @@
 	padding: 1rem;
 	margin: 2.4rem -0.8rem;
 	overflow: auto;
-	-webkit-overflow-scrolling: touch;
 	position: relative;
 }
 @media (min-width: 740px){
