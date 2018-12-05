@@ -5,6 +5,22 @@
  * Modified by Ryo Watanabe @rriver
  */
 
+.gatsby-highlight {
+	background: #2d2d2d;
+	padding: 1rem;
+	margin: 2.4rem -0.8rem;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+	position: relative;
+}
+@media (min-width: 740px){
+	.gatsby-highlight {
+		margin: 2.4rem 0;
+		padding: 1.2rem;
+		border-radius: 4px;
+	}
+}
+
 code[class*="language-"],
 pre[class*="language-"] {
 	color: #ccc;
@@ -36,17 +52,38 @@ pre[class*="language-"] {
 
 /* Code blocks */
 pre[class*="language-"] {
-	padding: 1rem 0.8rem;
-	margin: 2.4rem -0.8rem;
-	overflow: auto;
-	background: #2d2d2d;
+	padding: 0;
+	margin: 0;
+	overflow: initial;
+	float: left;
+	min-width: 100%;
 }
 @media (min-width: 740px){
 	pre[class*="language-"] {
-		padding: 1.6rem 1.8rem;
-		margin: 2.4rem 0;
-		overflow: auto;
-		border-radius: 4px;
+		
+	}
+}
+
+code[class*="language-"] {
+	display: block;
+}
+
+/* line highlight */
+.gatsby-highlight-code-line {
+  background-color: rgb(59, 59, 59);
+  display: block;
+  margin-right: -1rem;
+  margin-left: -1rem;
+  padding-right: 0.8rem;
+  padding-left: 0.55rem;
+	border-left: 0.25rem solid rgb(255, 195, 83);
+}
+@media (min-width: 740px){
+	.gatsby-highlight-code-line {
+		margin-right: -1.2rem;
+		margin-left: -1.2rem;
+		padding-right: 1.8rem;
+  	padding-left: 1.55rem;
 	}
 }
 
@@ -132,24 +169,4 @@ pre[class*="language-"] {
 
 .token.inserted {
 	color: green;
-}
-
-/* line highlight */
-.gatsby-highlight-code-line {
-  background-color: rgb(59, 59, 59);
-  display: block;
-  margin-right: -0.8rem;
-  margin-left: -0.8rem;
-  padding-right: 0.8rem;
-  padding-left: 0.55rem;
-	border-left: 0.25rem solid rgb(255, 195, 83);
-}
-@media (min-width: 740px){
-	.gatsby-highlight-code-line {
-		margin-right: -1.8rem;
-		margin-left: -1.8rem;
-		padding-right: 1.8rem;
-  	padding-left: 1.55rem;
-		overflow: auto;
-	}
 }
