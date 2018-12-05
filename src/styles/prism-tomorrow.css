@@ -133,3 +133,23 @@ pre[class*="language-"] {
 .token.inserted {
 	color: green;
 }
+
+/* line highlight */
+.gatsby-highlight-code-line {
+  background-color: rgb(59, 59, 59);
+  display: block;
+  margin-right: -0.8rem;
+  margin-left: -0.8rem;
+  padding-right: 0.8rem;
+  padding-left: 0.55rem;
+	border-left: 0.25rem solid rgb(255, 195, 83);
+}
+@media (min-width: 740px){
+	.gatsby-highlight-code-line {
+		margin-right: -1.8rem;
+		margin-left: -1.8rem;
+		padding-right: 1.8rem;
+  	padding-left: 1.55rem;
+		overflow: auto;
+	}
+}
