@@ -105,6 +105,19 @@
   text-decoration: underline;
 }
 
+.postBody blockquote {
+  margin: 0 0 2rem;
+  border-left: solid 0.6rem #ddd;
+  padding: 0 0 0 0.8rem;
+}
+@media (min-width: 480px){
+  .postBody blockquote {
+    margin: 0 0 3rem;
+    border-left: solid 0.8rem #ddd;
+    padding: 0 0 0 1rem;
+  }
+}
+
 /* spaces between elementts */
 .postBody p + h2,
 .postBody ul + h2,
