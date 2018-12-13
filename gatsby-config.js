@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     title: `R note`,
     siteUrl: `https://rnote.work`,
-    description: `@rriverの雑記ノートです。思ったことをそのまま書いてます。`,
+    description: `@rriverの雑記ノートです。思ったことをそのまま書いてます`,
     twitter: `@rriver`,
   },
   plugins: [
