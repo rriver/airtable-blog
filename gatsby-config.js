@@ -49,7 +49,7 @@ module.exports = {
                   node {
                     data {
                       title
-                      date
+                      date(formatString: "ddd, DD MMM YYYY, h:mm:ss +0900")
                       slug
                       body {
                         childMarkdownRemark {
