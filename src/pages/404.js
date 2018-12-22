@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql, Link, withPrefix } from "gatsby";
+import { graphql, withPrefix } from "gatsby";
 import Layout from "../components/layout";
 import styles from "../templates/blog-post.module.css";
 import Helmet from "react-helmet";
@@ -12,17 +12,17 @@ class notFoundTemplate extends React.Component {
     return (
       <Layout>
         <Helmet htmlAttributes={{ lang: "ja" }}>
-          <title>{post.site.siteMetadata.title}</title>
+          <title>Page Not Found - {post.site.siteMetadata.title}</title>
           <link
             rel="shortcut icon"
             href="https://parashuto.com/rriver/wp/wp-content/themes/rriver2/favicon.ico"
           />
-          <meta name="title" content={post.site.siteMetadata.title} />
+          <meta name="title" content={`"Page Note Found | "${post.site.siteMetadata.title}`} />
           <meta
             name="description"
             content={post.site.siteMetadata.description}
           />
-          <meta property="og:title" content={post.site.siteMetadata.title} />
+          <meta property="og:title" content={`"Page Note Found | "${post.site.siteMetadata.title}`} />
           <meta property="og:type" content="website" />
           <meta
             property="og:description"
@@ -46,7 +46,7 @@ class notFoundTemplate extends React.Component {
           />
           <meta
             property="twitter:title"
-            content={post.site.siteMetadata.title}
+            content={`"Page Note Found | "${post.site.siteMetadata.title}`}
           />
           <meta
             property="twitter:description"
@@ -62,7 +62,7 @@ class notFoundTemplate extends React.Component {
         <h1 className={styles.postTitle}>
           あ、ありませぬ...
         </h1>
-        <img src={Nowhere} alt="" />
+        <img src={Nowhere} alt="FILE MISSING" />
       </Layout>
     );
   }
