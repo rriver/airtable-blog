@@ -25,7 +25,7 @@
 }
 @media (min-width: 880px){
   .postTitle {
-    font-size: 3.0rem;
+    font-size: 2.8rem;
     margin: 2.4rem 0 2rem;
   }
 }
@@ -148,6 +148,20 @@
 @media (min-width: 400px){
   .postBody img[alt*="iPhone"] {
     width: 375px;
+  }
+}
+
+
+/* image width Medium size alt */
+.postBody img[alt*="Medium"] {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+}
+@media (min-width: 360px){
+  .postBody img[alt*="Medium"] {
+    width: 320px;
   }
 }
 
