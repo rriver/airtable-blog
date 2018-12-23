@@ -48,7 +48,7 @@ function Meta({ page, title, description, slug }) {
               { name: 'description', content: metaDescription },
               { property: 'og:title', content: metaTitle },
               { property: 'og:url', content: metaUrl },
-              { property: 'og:description', metaDescription },
+              { property: 'og:description', content: metaDescription },
               { property: 'og:type', content: metaType },
               { property: 'og:image', content: metaImage },
               { property: 'twitter:card', content: 'summary_large_image' },
