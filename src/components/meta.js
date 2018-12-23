@@ -22,7 +22,7 @@ function Meta({ page, title, description, slug }) {
         
         let metaTitle, metaDescription, metaUrl, metaType
         const metaTwitter = siteMeta.twitter
-        const metaImage = siteMeta.siteUrl + withPrefix('/img/rnote-logo-ogimage.png')
+        const metaImage = siteMeta.siteUrl + withPrefix('/img/rnote-logo-board-inversed.png')
 
         if (page === "home"){
           metaTitle = siteMeta.title
@@ -51,10 +51,9 @@ function Meta({ page, title, description, slug }) {
               { property: 'og:description', metaDescription },
               { property: 'og:type', content: metaType },
               { property: 'og:image', content: metaImage },
-              { property: 'twitter:card', content: 'summary' },
+              { property: 'twitter:card', content: 'summary_large_image' },
               { property: 'twitter:site', content: metaTwitter },
               { property: 'twitter:creator', content: metaTwitter },
-              { property: 'twitter:description', metaDescription },
             ]}
           />
         )
