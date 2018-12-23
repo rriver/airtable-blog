@@ -97,6 +97,13 @@
   margin-bottom: 0;
 }
 
+.postBody li > p {
+  margin: 0 0 1.2rem;
+}
+.postBody li > ul {
+  margin: 0.6rem 0;
+}
+
 .postBody a {
   text-decoration: none;
   color: rgb(0, 97, 153);
