@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import containerStyles from "../components/layout.module.css"
-import styles from "./index.module.css"
+import containerStyles from "../components/layout.module.scss"
+import styles from "./index.module.scss"
 import Meta from "../components/meta"
 import Footer from "../components/footer"
 

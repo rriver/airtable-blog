@@ -20,9 +20,8 @@ body {
 main {
   flex: 1 0 auto;
   padding: 0 0.8rem;
-}
-@media (min-width: 740px){
-  main {
+  
+  @media (min-width: 740px){
     padding: 0 2rem;
   }
 }
