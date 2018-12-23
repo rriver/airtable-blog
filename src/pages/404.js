@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../components/layout";
-import styles from "../templates/blog-post.module.css";
+import styles from "../templates/blog-post.module.scss";
 import Meta from "../components/meta";
 import Nowhere from "../assets/no-where-in-sight.svg";
 
