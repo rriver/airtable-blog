@@ -54,6 +54,7 @@ function Meta({ page, title, description, slug }) {
               { property: 'twitter:card', content: 'summary' },
               { property: 'twitter:site', content: metaTwitter },
               { property: 'twitter:creator', content: metaTwitter },
+              { property: 'twitter:description', metaDescription },
             ]}
           />
         )
