@@ -60,7 +60,7 @@ export const query = graphql`
           data {
             title
             slug
-            date(formatString: "YYYY/MM/DD HH:mm")
+            date(formatString: "YYYY/MM/DD @HH:mm")
           }
         }
       }
