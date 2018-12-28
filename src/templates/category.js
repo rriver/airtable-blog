@@ -20,7 +20,7 @@ class categoryTemplate extends React.Component {
           description={`「${cat.data.catname}」関連のノート`}
           slug={cat.data.slug}
         />
-        <h1 className={styles.postTitle}>{`Note${postCount > 1 ? `s` : ``} in ${cat.data.catname}`}</h1>
+        <h1 className={styles.postTitle}>{`Note${postCount > 1 ? `s` : ``} on ${cat.data.catname}`}</h1>
 
         <ul className={indexStyles.postlist}>
           {posts.edges.map(({ node }, index) => (

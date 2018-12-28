@@ -110,6 +110,10 @@
     }
   }
 
+  img {
+    border: 1px solid #ddd;
+  }
+
   /* image width iPhone alt */
   img[alt*="iPhone"] {
     display: block;
@@ -164,6 +168,9 @@
   color: #666;
 }
 
+.postDate + .postBody {
+  margin-top: 3rem;
+}
 
 .postCategories {
   margin: 0.8rem 0 3rem;

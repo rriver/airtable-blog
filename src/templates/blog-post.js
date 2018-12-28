@@ -11,10 +11,10 @@ class postTemplate extends React.Component {
 
     let categories
     if(post.airtable.data.category != null){
-      // let last = post.airtable.data.category.length - 1
       categories = post.airtable.data.category.map(({ data }, index) => (
         <span className={styles.tags} key={index}><Link to={`/category/${data.slug}/`}>{data.catname}</Link></span>
       ))
+      categories = <p className={styles.postCategories}>カテゴリ： {categories}</p>
     }
     
     return (
@@ -27,7 +27,7 @@ class postTemplate extends React.Component {
         />
         <h1 className={styles.postTitle}>{post.airtable.data.title}</h1>
         <p className={styles.postDate}>Noted on {post.airtable.data.date}</p>
-        <p className={styles.postCategories}>カテゴリ： {categories}</p>
+        {categories}
         <div
           className={styles.postBody}
           dangerouslySetInnerHTML={{
