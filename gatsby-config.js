@@ -44,7 +44,11 @@ module.exports = {
             },
             query: `
             {
-              allAirtable(limit:1000, sort: {fields: [data___date], order: DESC}) {
+              allAirtable(
+                limit: 1000,
+                sort: { fields: [data___date], order: DESC },
+                filter: { table: {eq: "entry"} }
+              ) {
                 edges {
                   node {
                     data {
