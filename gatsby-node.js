@@ -2,10 +2,13 @@ const path = require(`path`)
 
 exports.createPages = ({ graphql, actions}) => {
    const { createPage } = actions
-   return new Promise((resolve, reject) => {
+   
+   const loadPages = new Promise((resolve, reject) => {
       graphql(`
          {
-            allAirtable {
+            allAirtable(
+               filter: { table: {eq: "entry"} },
+            ) {
                edges {
                   node {
                      data {
@@ -22,8 +25,6 @@ exports.createPages = ({ graphql, actions}) => {
               path: node.data.slug,
               component: path.resolve(`./src/templates/blog-post.js`),
               context: {
-                // Data passed to context is available
-                // in page queries as GraphQL variables.
                 slug: node.data.slug,
               },
             })
@@ -31,4 +32,39 @@ exports.createPages = ({ graphql, actions}) => {
          resolve()
       })
    })
+
+   const loadCategories = new Promise((resolve, reject) => {
+      graphql(`
+         {
+            allAirtable(
+               filter: {
+                  table: {eq: "category"},
+                  data: {entry: {ne: null}},
+               },
+               sort: {fields: [data___slug], order: ASC}
+            ) {
+               edges {
+                  node {
+                     data {
+                        slug
+                     }
+                  }
+               }
+            }
+         }
+      `).then(result => {
+         result.data.allAirtable.edges.forEach(({ node }) => {
+            createPage({
+               path: `/category/${node.data.slug}`,
+               component: path.resolve(`./src/templates/category.js`),
+               context: {
+                  slug: node.data.slug,
+               },
+            })
+         })
+         resolve()
+      })
+   })
+
+   return Promise.all([loadPages, loadCategories])
 }

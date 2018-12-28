@@ -1,9 +1,10 @@
 import React from "react"
 import { StaticQuery, Link, graphql } from "gatsby"
 import styles from "./layout.module.scss"
+import BackLink from "./back-link"
 import Footer from "./footer"
 
-export default ({ children }) => (
+export default ({ children, location, backLink }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -23,9 +24,7 @@ export default ({ children }) => (
         </header>
         <main>
           {children}
-          <Link to={`/`} className={styles.bottomLink}>
-            一覧に戻る
-          </Link>
+          {backLink ? <BackLink location={location} /> : '' }
         </main>
         <Footer />
       </div>

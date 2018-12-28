@@ -91,7 +91,13 @@ module.exports = {
                tableView: 'Published',
                queryName: '',
                mapping: { 'body': 'text/markdown' },
+               tableLinks: ['category',],
             },
+            {
+              baseId: 'appy2K4C7JMm8lJKu',
+              tableName: 'category',
+              tableView: 'Active',
+            }
          ]
       },
     },

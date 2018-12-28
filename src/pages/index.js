@@ -39,14 +39,17 @@ export default indexTemplate
 
 export const query = graphql`
    query {
-      allAirtable(sort: { fields: [data___date], order: DESC }) {
+      allAirtable(
+         sort: { fields: [data___date], order: DESC },
+         filter: { table: {eq: "entry"}},
+      ) {
          totalCount
          edges {
             node {
                data {
                   slug
                   title
-                  date(formatString: "YYYY/MM/DD HH:mm")
+                  date(formatString: "YYYY/MM/DD @HH:mm")
                   image {
                      id
                      url
