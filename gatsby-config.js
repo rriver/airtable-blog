@@ -109,6 +109,12 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: `gatsby-remark-external-links`,
+            options: {
+              rel: "noopener noreferrer",
+            }
+          },
+          {
             resolve: `gatsby-remark-prismjs`,
           }
         ]
