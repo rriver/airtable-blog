@@ -92,7 +92,7 @@ module.exports = {
             {
                baseId: 'appy2K4C7JMm8lJKu',
                tableName: 'entry',
-               tableView: 'Published',
+               tableView: `${process.env.GATSBY_AIRTABLE_TABLEVIEW}`,
                queryName: '',
                mapping: { 'body': 'text/markdown' },
                tableLinks: ['category',],
