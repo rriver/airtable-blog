@@ -214,12 +214,13 @@
 .posted::before, .updated::before {
   display: inline-block;
   overflow: hidden;
-  position: relative;
-  top: 0.3rem;
   margin-right: 0.125rem;
   width: 20px;
   height: 20px;
   text-indent: -9999px;
+  vertical-align: middle;
+  position: relative;
+  top: -0.125rem;
 }
 
 .posted::before {
