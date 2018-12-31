@@ -210,6 +210,30 @@
   margin-top: 3rem;
 }
 
+
+.posted::before, .updated::before {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  top: 0.3rem;
+  margin-right: 0.125rem;
+  width: 20px;
+  height: 20px;
+  text-indent: -9999px;
+}
+
+.posted::before {
+  content: "Noted on";
+  background: url(../assets/baseline-event_note-24px.svg) no-repeat 0 0;
+  background-size: 20px 20px;
+}
+
+.updated::before {
+  content: "Updated on";
+  background: url(../assets/baseline-update-24px.svg) no-repeat 0 0;
+  background-size: 20px 20px;
+}
+
 .postCategories {
   margin: 0.8rem 0 3rem;
   font-size: 0.9rem;
