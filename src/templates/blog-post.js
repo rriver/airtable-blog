@@ -20,7 +20,7 @@ class postTemplate extends React.Component {
     let updateDate, dateSpacer
     if(post.airtable.data.update != null){
       updateDate = <span className={styles.updated}>{post.airtable.data.update}</span>
-      dateSpacer = "・"
+      dateSpacer = <span className={styles.dateSpacer}></span>
     }
     
     return (

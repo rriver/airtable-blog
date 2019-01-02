@@ -201,7 +201,7 @@
 .postDate {
   margin: 1rem 0 0.8rem;
   font-size: 0.9rem;
-  line-height: 1;
+  line-height: 1.5;
   text-align: center;
   color: #666;
 }
@@ -233,6 +233,15 @@
   content: "Updated on";
   background: url(../assets/baseline-update-24px.svg) no-repeat 0 0;
   background-size: 20px 20px;
+}
+
+.dateSpacer::before {
+  content: "\A";
+  white-space: pre;
+
+  @media (min-width: 480px){
+    content: "・";
+  }
 }
 
 .postCategories {
