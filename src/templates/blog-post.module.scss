@@ -8,7 +8,10 @@
   margin: 0.8rem 0;
   padding: 0;
   text-align: center;
-  color: #555;
+  color: #124D93;
+  background: -webkit-linear-gradient(0deg, #1770B8, #145DA5, #124D93);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
   @media (min-width: 580px){
     font-size: 2.0rem;
@@ -28,7 +31,10 @@
   h2 {
     font-size: 1.5rem;
     line-height: 1.4;
-    color: #555;
+    color: #124D93;
+    background: -webkit-linear-gradient(0deg, #1770B8, #145DA5, #124D93);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   
     @media (min-width: 480px){
       font-size: 1.8rem;
