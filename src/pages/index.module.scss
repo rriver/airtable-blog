@@ -61,7 +61,7 @@
   }
 }
 
-.totalposts {
+.totalposts, .intro {
   text-align: center;
   font-size: 0.9rem;
   color: #666;
@@ -70,6 +70,6 @@
     font-size: 1rem;
   }
   @media (min-width: 480px){
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }

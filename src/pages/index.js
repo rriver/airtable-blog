@@ -16,7 +16,7 @@ class indexTemplate extends React.Component {
             />
             <main>
                <h1 className={styles.blogtitle}>{post.site.siteMetadata.title}</h1>
-               <p className={styles.totalposts}>{post.allAirtable.totalCount} notes</p>
+               <p className={styles.intro}>{post.site.siteMetadata.description}</p>
                <ul className={styles.postlist}>
                   {post.allAirtable.edges.map(({ node }, index) => (
                      <li key={index}>
