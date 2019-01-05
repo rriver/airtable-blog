@@ -49,7 +49,7 @@ export const query = graphql`
                data {
                   slug
                   title
-                  date(formatString: "YYYY/MM/DD @HH:mm")
+                  date(formatString: "YYYY年MM月DD日")
                   image {
                      id
                      url

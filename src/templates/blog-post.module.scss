@@ -109,11 +109,13 @@
 
     &::after {
       display: inline-block;
+      overflow: hidden;
       width: 20px;
       height: 20px;
       background: url(../assets/outline-open_in_new-24px.svg) no-repeat 0 0;
       background-size: 20px 20px;
-      content: " ";
+      content: "（別窓で開きます）";
+      text-indent: -9999px;
       position: relative;
       top: 0.15625rem;
       left: 0.125rem;
@@ -230,13 +232,13 @@
 }
 
 .posted::before {
-  content: "Noted on";
+  content: "投稿日";
   background: url(../assets/baseline-event_note-24px.svg) no-repeat 0 0;
   background-size: 20px 20px;
 }
 
 .updated::before {
-  content: "Updated on";
+  content: "更新日";
   background: url(../assets/baseline-update-24px.svg) no-repeat 0 0;
   background-size: 20px 20px;
 }

@@ -19,7 +19,7 @@ class postTemplate extends React.Component {
 
     let updateDate, dateSpacer
     if(post.airtable.data.update != null){
-      updateDate = <span className={styles.updated}>{post.airtable.data.update}</span>
+      updateDate = <span className={styles.updated} title="更新日">{post.airtable.data.update}</span>
       dateSpacer = <span className={styles.dateSpacer}></span>
     }
     
@@ -32,7 +32,7 @@ class postTemplate extends React.Component {
           slug={post.airtable.data.slug}
         />
         <h1 className={styles.postTitle}>{post.airtable.data.title}</h1>
-        <p className={styles.postDate}><span className={styles.posted}>{post.airtable.data.date}</span>{dateSpacer}{updateDate}</p>
+        <p className={styles.postDate}><span className={styles.posted} title="投稿日">{post.airtable.data.date}</span>{dateSpacer}{updateDate}</p>
         {categories}
         <div
           className={styles.postBody}
@@ -58,8 +58,8 @@ export const query = graphql`
             excerpt
           }
         }
-        date(formatString: "YYYY/MM/DD @HH:mm")
-        update(formatString: "YYYY/MM/DD @HH:mm")
+        date(formatString: "YYYY年MM月DD日")
+        update(formatString: "YYYY年MM月DD日")
         slug
         category {
           data {
