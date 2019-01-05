@@ -10,6 +10,7 @@ module.exports = {
     twitter: `@rriver`,
   },
   plugins: [
+    `gatsby-plugin-catch-links`,
     {
       resolve: `gatsby-plugin-feed`,
       options: {
