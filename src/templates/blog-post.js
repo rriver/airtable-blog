@@ -58,8 +58,8 @@ export const query = graphql`
             excerpt
           }
         }
-        date(formatString: "YYYY年MM月DD日")
-        update(formatString: "YYYY年MM月DD日")
+        date(formatString: "YYYY年M月D日")
+        update(formatString: "YYYY年M月D日")
         slug
         category {
           data {
