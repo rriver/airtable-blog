@@ -120,8 +120,7 @@ module.exports = {
             options: {
               offsetY: `30`,
               icon: false,
-              className: `custom-class`,
-              maintainCase: false,
+              maintainCase: true,
             },
           },
           {
