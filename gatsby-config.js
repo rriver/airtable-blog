@@ -110,18 +110,36 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-external-links`,
-            options: {
-              rel: "noopener noreferrer",
-            }
-          },
-          {
             resolve: `gatsby-remark-autolink-headers`,
             options: {
               offsetY: `30`,
               icon: false,
               maintainCase: true,
             },
+          },
+          {
+            resolve: 'gatsby-remark-emojis',
+            options: {
+              active : true,
+              class  : 'emoji-icon',
+              // Available size: 16, 24, 32, 64
+              size   : 64,
+              styles : {
+                display      : 'inline',
+                margin       : '0',
+                'margin-top' : '0',
+                position     : 'relative',
+                top          : '0.125rem',
+                width        : '1.4rem',
+                border       : 'none'
+              }
+            }
+          },
+          {
+            resolve: `gatsby-remark-external-links`,
+            options: {
+              rel: "noopener noreferrer",
+            }
           },
           {
             resolve: `gatsby-remark-prismjs`,
