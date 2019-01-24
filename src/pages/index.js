@@ -9,6 +9,20 @@ class indexTemplate extends React.Component {
    render() {
       const posts = this.props.data.posts
       const category = this.props.data.category
+      const catOrdered = category.edges.sort((a,b) => {
+         let x = a.node.data.entry.length;
+         let y = b.node.data.entry.length;
+
+         let res = 0;
+         if (x > y){
+            res = -1;
+         }
+         if (x < y){
+            res = 1;
+         }
+         return res;
+      });
+      
       const siteMeta = this.props.data
 
       return (
@@ -21,7 +35,7 @@ class indexTemplate extends React.Component {
                <p className={styles.intro}>{siteMeta.site.siteMetadata.description}</p>
                <div className={styles.catlist}>
                   <ul>
-                     {category.edges.map(({ node }, index) => (
+                     {catOrdered.map(({ node }, index) => (
                         <li key={index}>
                            <Link
                               to={`category/${node.data.slug}/`}
@@ -83,6 +97,7 @@ export const query = graphql`
              data {
                catname
                slug
+               entry
              }
            }
          }
