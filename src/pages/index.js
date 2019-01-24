@@ -7,7 +7,9 @@ import Footer from "../components/footer"
 
 class indexTemplate extends React.Component {
    render() {
-      const post = this.props.data
+      const posts = this.props.data.posts
+      const category = this.props.data.category
+      const siteMeta = this.props.data
 
       return (
          <div className={containerStyles.wrapper}>
@@ -15,10 +17,22 @@ class indexTemplate extends React.Component {
                page="home"
             />
             <main>
-               <h1 className={styles.blogtitle}>{post.site.siteMetadata.title}</h1>
-               <p className={styles.intro}>{post.site.siteMetadata.description}</p>
+               <h1 className={styles.blogtitle}>{siteMeta.site.siteMetadata.title}</h1>
+               <p className={styles.intro}>{siteMeta.site.siteMetadata.description}</p>
+               <div className={styles.catlist}>
+                  <ul>
+                     {category.edges.map(({ node }, index) => (
+                        <li key={index}>
+                           <Link
+                              to={`category/${node.data.slug}/`}
+                           >{node.data.catname}
+                           </Link>
+                        </li>
+                     ))}
+                  </ul>
+               </div>
                <ul className={styles.postlist}>
-                  {post.allAirtable.edges.map(({ node }, index) => (
+                  {posts.edges.map(({ node }, index) => (
                      <li key={index}>
                         <span>{node.data.date}</span><br/>
                         <Link
@@ -39,7 +53,7 @@ export default indexTemplate
 
 export const query = graphql`
    query {
-      allAirtable(
+      posts: allAirtable(
          sort: { fields: [data___date], order: DESC },
          filter: { table: {eq: "entry"}},
       ) {
@@ -58,6 +72,21 @@ export const query = graphql`
             }
          }
       }
+      category: allAirtable(
+         filter: {
+           table: {eq: "category"},
+           data: {entry: {ne: null}}
+         }
+       ) {
+         edges {
+           node {
+             data {
+               catname
+               slug
+             }
+           }
+         }
+       }
       site {
          siteMetadata {
             title
