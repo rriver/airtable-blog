@@ -14,7 +14,7 @@ class postTemplate extends React.Component {
       categories = post.airtable.data.category.map(({ data }, index) => (
         <span className={styles.tags} key={index}><Link to={`/category/${data.slug}/`}>{data.catname}</Link></span>
       ))
-      categories = <p className={styles.postCategories}>カテゴリ： {categories}</p>
+      categories = <p className={styles.postCategories}>{categories}</p>
     }
 
     let updateDate, dateSpacer
