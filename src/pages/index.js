@@ -22,7 +22,7 @@ class indexTemplate extends React.Component {
          }
          return res;
       });
-      
+      const flagged = this.props.data.flagged
       const siteMeta = this.props.data
 
       return (
@@ -40,6 +40,19 @@ class indexTemplate extends React.Component {
                            <Link
                               to={`category/${node.data.slug}/`}
                            >{node.data.catname}
+                           </Link>
+                        </li>
+                     ))}
+                  </ul>
+               </div>
+               <div className={styles.flagged}>
+                  <h2>FLAGGED</h2>
+                  <ul>
+                     {flagged.edges.map(({ node }, index) => (
+                        <li key={index}>
+                           <Link
+                              to={`${node.data.slug}/`}
+                           >{node.data.title}
                            </Link>
                         </li>
                      ))}
@@ -78,30 +91,41 @@ export const query = graphql`
                   slug
                   title
                   date(formatString: "YYYY年M月D日")
-                  image {
-                     id
-                     url
-                  }
                }
             }
          }
       }
       category: allAirtable(
          filter: {
-           table: {eq: "category"},
-           data: {entry: {ne: null}}
+            table: {eq: "category"},
+            data: {entry: {ne: null}}
          }
-       ) {
+         ) {
          edges {
-           node {
-             data {
+            node {
+               data {
                catname
                slug
                entry
-             }
-           }
+               }
+            }
          }
-       }
+      }
+      flagged: allAirtable(
+         filter: {
+            table: {eq: "entry"},
+            data: {flag: {ne: null}}
+         }
+      ) {
+         edges {
+            node {
+               data {
+                  title
+                  slug
+               }
+            }
+         }
+      }
       site {
          siteMetadata {
             title
