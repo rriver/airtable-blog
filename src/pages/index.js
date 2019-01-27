@@ -22,8 +22,9 @@ class indexTemplate extends React.Component {
          }
          return res;
       });
-      const flagged = this.props.data.flagged
       const siteMeta = this.props.data
+
+      const flagged = flaggedNotes(posts);
 
       return (
          <div className={containerStyles.wrapper}>
@@ -45,19 +46,7 @@ class indexTemplate extends React.Component {
                      ))}
                   </ul>
                </div>
-               <div className={styles.flagged}>
-                  <h2>FLAGGED</h2>
-                  <ul>
-                     {flagged.edges.map(({ node }, index) => (
-                        <li key={index}>
-                           <Link
-                              to={`${node.data.slug}/`}
-                           >{node.data.title}
-                           </Link>
-                        </li>
-                     ))}
-                  </ul>
-               </div>
+               {flagged}
                <ul className={styles.postlist}>
                   {posts.edges.map(({ node }, index) => (
                      <li key={index}>
@@ -78,6 +67,34 @@ class indexTemplate extends React.Component {
 
 export default indexTemplate
 
+function flaggedNotes (posts) {
+   let flagged = posts.edges.filter((a) => {
+      return a.node.data.flag === "flagged";
+   });
+
+   console.log(flagged);
+
+   if(typeof flagged === "undefined" || flagged.length === 0){
+      return null;
+   }
+
+   return(
+      <div className={styles.flagged}>
+         <h2>FLAGGED</h2>
+         <ul>
+            {flagged.map(({ node }, index) => (
+               <li key={index}>
+                  <Link
+                     to={`${node.data.slug}/`}
+                  >{node.data.title}
+                  </Link>
+               </li>
+            ))}
+         </ul>
+      </div>
+   )
+}
+
 export const query = graphql`
    query {
       posts: allAirtable(
@@ -91,6 +108,7 @@ export const query = graphql`
                   slug
                   title
                   date(formatString: "YYYY年M月D日")
+                  flag
                }
             }
          }
@@ -104,24 +122,9 @@ export const query = graphql`
          edges {
             node {
                data {
-               catname
-               slug
-               entry
-               }
-            }
-         }
-      }
-      flagged: allAirtable(
-         filter: {
-            table: {eq: "entry"},
-            data: {flag: {ne: null}}
-         }
-      ) {
-         edges {
-            node {
-               data {
-                  title
+                  catname
                   slug
+                  entry
                }
             }
          }
