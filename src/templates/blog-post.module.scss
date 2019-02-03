@@ -3,7 +3,7 @@
 }
 
 .postTitle {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   line-height: 1.4;
   margin: 0.8rem 0;
   padding: 0;
@@ -13,16 +13,20 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
+  @media (min-width: 480px){
+    font-size: 1.7rem;
+  }
+
   @media (min-width: 580px){
-    font-size: 2.0rem;
+    font-size: 1.8rem;
     margin: 1.2rem 0;
   }
   @media (min-width: 680px){
-    font-size: 2.4rem;
+    font-size: 2.0rem;
     margin: 2rem 0 1.6rem;
   }
-  @media (min-width: 880px){
-    font-size: 2.6rem;
+  @media (min-width: 800px){
+    font-size: 2.2rem;
     margin: 2.4rem 0 2rem;
   }
 }
