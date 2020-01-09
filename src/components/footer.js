@@ -15,7 +15,7 @@ export default () => (
     `}
     render={data => (
       <footer>
-        <p className={styles.copyright}>Copyright <span>©</span> 2018 <a href="https://twitter.com/rriver/">{data.site.siteMetadata.twitter}</a></p>
+        <p className={styles.copyright}>Copyright <span>©</span> 2020 <a href="https://twitter.com/rriver/">{data.site.siteMetadata.twitter}</a></p>
       </footer>
     )}
   />
