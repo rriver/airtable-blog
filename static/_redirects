@@ -1,0 +1,2 @@
+# Redirect domain
+https://rnote.work/* https://note.rriver.dev/:splat 301!
