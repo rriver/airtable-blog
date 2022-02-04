@@ -2,8 +2,8 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Meta from "../components/meta"
-import postStyles from "../templates/blog-post.module.scss"
-import styles from "./category.module.scss"
+import * as postStyles from "../templates/blog-post.module.scss"
+import * as styles from "./category.module.scss"
 
 class catListTemplate extends React.Component {
    render() {
@@ -22,7 +22,7 @@ class catListTemplate extends React.Component {
             {cats.allAirtable.edges.map(({ node }, index) => (
               <li key={index}>
                 <Link
-                  to={`category/${node.data.slug}/`}
+                  to={`${node.data.slug}/`}
                 >{node.data.catname}
                 </Link>
               </li>

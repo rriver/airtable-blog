@@ -1,6 +1,6 @@
 import React from "react"
 import { StaticQuery, Link, graphql } from "gatsby"
-import styles from "./layout.module.scss"
+import * as styles from "./layout.module.scss"
 import BackLink from "./back-link"
 import Footer from "./footer"
 

@@ -1,6 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql, withPrefix } from "gatsby"
-import Helmet from "react-helmet"
+import { Helmet } from "react-helmet"
 
 function Meta({ page, title, description, slug }) {
   return (

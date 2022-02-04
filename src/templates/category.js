@@ -1,8 +1,8 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
-import styles from "./blog-post.module.scss"
-import indexStyles from "../pages/index.module.scss"
+import * as styles from "./blog-post.module.scss"
+import * as indexStyles from "../pages/index.module.scss"
 import Meta from "../components/meta"
 
 class categoryTemplate extends React.Component {
@@ -25,7 +25,7 @@ class categoryTemplate extends React.Component {
             <li key={index}>
               <span>{node.data.date}</span><br />
               <Link
-                to={`${node.data.slug}/`}
+                to={`/${node.data.slug}`}
               >{node.data.title}
               </Link>
             </li>

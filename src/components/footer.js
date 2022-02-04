@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "./footer.module.scss"
+import * as styles from "./footer.module.scss"
 import { StaticQuery, graphql } from "gatsby"
 
 export default () => (
@@ -15,7 +15,7 @@ export default () => (
     `}
     render={data => (
       <footer>
-        <p className={styles.copyright}>Copyright <span>©</span> 2020 <a href="https://twitter.com/rriver/">{data.site.siteMetadata.twitter}</a></p>
+        <p className={styles.copyright}>Copyright <span>©</span> 2021 <a href="https://twitter.com/rriver/">{data.site.siteMetadata.twitter}</a></p>
       </footer>
     )}
   />

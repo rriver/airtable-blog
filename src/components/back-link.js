@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import styles from "./back-link.module.scss"
+import * as styles from "./back-link.module.scss"
 
 function backLink({location}) {
   let linkTo, linkText
